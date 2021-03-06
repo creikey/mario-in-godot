@@ -1,0 +1,64 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Mario/Mario.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Main.gd" type="Script" id=2]
+[ext_resource path="res://UI/UITheme.tres" type="Theme" id=3]
+[ext_resource path="res://UI/UI.gd" type="Script" id=4]
+[ext_resource path="res://UI/CoinsText.gd" type="Script" id=5]
+
+[node name="Main" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Mario" parent="." instance=ExtResource( 1 )]
+position = Vector2( 576, 896 )
+
+[node name="CurrentLevelHolder" type="Node2D" parent="."]
+
+[node name="SpawnedIn" type="Node2D" parent="."]
+
+[node name="UI" type="CanvasLayer" parent="."]
+script = ExtResource( 4 )
+mario_path = NodePath("../Mario")
+
+[node name="ThemeSetter" type="Control" parent="UI"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/ThemeSetter"]
+anchor_right = 1.0
+margin_bottom = 128.0
+size_flags_horizontal = 3
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CoinsContainer" type="VBoxContainer" parent="UI/ThemeSetter/HBoxContainer"]
+margin_left = 903.0
+margin_right = 1016.0
+margin_bottom = 128.0
+size_flags_vertical = 3
+alignment = 1
+
+[node name="Label" type="Label" parent="UI/ThemeSetter/HBoxContainer/CoinsContainer"]
+margin_top = 26.0
+margin_right = 113.0
+margin_bottom = 62.0
+text = "COINS"
+align = 1
+
+[node name="CoinsText" type="Label" parent="UI/ThemeSetter/HBoxContainer/CoinsContainer"]
+margin_top = 66.0
+margin_right = 113.0
+margin_bottom = 102.0
+text = "5"
+align = 1
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="dead" from="Mario" to="." method="_on_Mario_dead"]

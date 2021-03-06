@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Big Jump.wav-15244ff3a9e07ee8a4942243d11d5deb.sample"
+
+[deps]
+
+source_file="res://sounds/Big Jump.wav"
+dest_files=[ "res://.import/Big Jump.wav-15244ff3a9e07ee8a4942243d11d5deb.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

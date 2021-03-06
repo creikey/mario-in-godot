@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Levels/bg-1-1.png" type="Texture" id=1]
+
+
+
+[node name="Hill" type="Sprite"]
+position = Vector2( 0, 960 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+offset = Vector2( 0, -45 )
+region_enabled = true
+region_rect = Rect2( 0, 155, 80, 45 )

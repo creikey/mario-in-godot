@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Bowser Die.wav-15eececeebff8ddd2dc69448dbf71402.sample"
+
+[deps]
+
+source_file="res://sounds/Bowser Die.wav"
+dest_files=[ "res://.import/Bowser Die.wav-15eececeebff8ddd2dc69448dbf71402.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
